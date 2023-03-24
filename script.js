@@ -776,7 +776,7 @@ var couriers = [
       fetch(full_url)
       .then(res => res.text())
       .then(rep => {
-       var users = rep;
+       var users = JSON.parse(rep.substr(47).slice(0,-2));
        console.log(users);
      });
 
