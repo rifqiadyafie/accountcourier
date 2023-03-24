@@ -767,7 +767,18 @@ var couriers = [
       
       }
 
+      let sheet_id = '4833df44-47ea-4e9e-8703-b6fd04d0db05';
+      let sheet_title = 'Sheet1';
+      let sheet_range = 'A1:F300';
 
+      let full_url = ('https://sheet.best/api/sheets/' + sheet_id + '/gviz/tq?sheet=' + '&range=' + sheet_range);
+      // let full_url = ('https://sheet.best/api/sheets/4833df44-47ea-4e9e-8703-b6fd04d0db05');
+      fetch(full_url)
+      .then(res => res.text())
+      .then(rep => {
+       var users = rep;
+       console.log(users);
+     });
 
 function kirim() {
         const scriptURL = 'https://script.google.com/macros/s/AKfycbx3nn3fp7ckkHzm7xiLfwDUNr_CZzUyy7_pRQ8eMyg3bhlpa_B1a9hLDImlfFippvje/exec';
